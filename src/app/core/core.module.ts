@@ -7,20 +7,19 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 
-
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
-    NotFoundComponent,
+    NotFoundComponent
   ],
   imports: [
-    CommonModule, SharedModule
+    CommonModule,
+    SharedModule
   ],
-  exports:[
+  exports :[
     HeaderComponent,
-    FooterComponent,
-    NotFoundComponent,
-  ]
+    FooterComponent
+  ],
 })
 export class CoreModule { }

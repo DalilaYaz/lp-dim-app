@@ -1,25 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NotFoundError } from 'rxjs';
-import { StudentComponent } from './student/student.component';
+import { NotFoundComponent } from './core/components/not-found/not-found.component';
 
 const routes: Routes = [
-
   {
-    path:"",
-    redirectTo:"students",
-    pathMatch:"full",
+    path: '',
+    redirectTo : 'students',
+    pathMatch: 'full'
   },
   {
-    path:"students",
-    loadChildren: () => import ("./student/student.module").then(m => m.StudentModule)
+    path: 'students',
+    loadChildren: () => import('./student/student.module').then(m => m.StudentModule)
   },
   {
-    path:"**",
-    component:NotFoundError,
+    path: '**',
+    component: NotFoundComponent
   }
-
-
 ];
 
 @NgModule({
