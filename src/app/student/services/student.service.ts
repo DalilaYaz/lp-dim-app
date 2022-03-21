@@ -6,7 +6,7 @@ import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class StudentService {
-  private readonly studentPath : string = '/student'; // mettre le path pour accerder a l'api 
+  private readonly studentPath : string = '/students'; // mettre le path pour accerder a l'api 
 
 
   constructor(private _http: HttpClient) { }
